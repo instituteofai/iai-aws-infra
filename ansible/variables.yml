@@ -1,0 +1,8 @@
+# Code repository url
+github_repo_url: "https://github.com/instituteofai/pretrained-imagenet"
+
+# Code repo destination
+code_dest: "/var/www/pretrained-imagenet"
+
+# Path to virtual environment
+virtualenv_path: "{{ code_dest }}/virtualenv"

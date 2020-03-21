@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve objclf
+After=network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/var/www/pretrained-imagenet
+Environment="PATH=/var/www/pretrained-imagenet/virtualenv/bin"
+ExecStart=/var/www/pretrained-imagenet/virtualenv/bin/uwsgi --ini /var/www/pretrained-imagenet/app/app.ini
+
+[Install]
+WantedBy=multi-user.target
