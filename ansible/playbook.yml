@@ -55,8 +55,16 @@
     - name: create symlink in sites-enabled folder
       file: src=/etc/nginx/sites-available/objclf.conf dest=/etc/nginx/sites-enabled/objclf.conf state=link
 
+    - name: remove default nginx site
+      file: path=/etc/nginx/sites-available/default state=absent
+      notify:
+        - restart nginx
+
     - name: copy systemd unit file to start uwsgi server
       template: src=objclf.service.tmp dest=/etc/systemd/system/objclf.service
+
+    - name: start objclf service
+      service: name=objclf state=started enabled=yes 
 
   handlers:
     - name: restart nginx
