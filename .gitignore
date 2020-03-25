@@ -5,3 +5,7 @@ credentials
 .terraform
 *.tfstate
 *.tfstate.backup
+
+# Keys
+*.pub
+*.pem
