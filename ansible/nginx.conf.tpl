@@ -1,5 +1,5 @@
 server {
-  listen 9001;
+  listen 80;
   server_name _;
 
   location / { try_files $uri @objclf; }
