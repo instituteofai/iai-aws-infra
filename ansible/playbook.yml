@@ -45,6 +45,7 @@
       pip:
         requirements: "{{ code_dest }}/requirements.txt"
         virtualenv: "{{ virtualenv_path }}"
+        extra_args: "--no-cache-dir"
 
     - name: copy nginx configuration
       template: src=nginx.conf.tpl dest=/etc/nginx/sites-available/objclf.conf
