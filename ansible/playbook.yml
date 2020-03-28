@@ -56,7 +56,7 @@
       file: src=/etc/nginx/sites-available/objclf.conf dest=/etc/nginx/sites-enabled/objclf.conf state=link
 
     - name: remove default nginx site
-      file: path=/etc/nginx/sites-available/default state=absent
+      file: path=/etc/nginx/sites-enabled/default state=absent
       notify:
         - restart nginx
 
