@@ -1,3 +1,3 @@
 default ansible_host=127.0.0.1 ansible_port=2222 ansible_user=vagrant ansible_ssh_private_key_file=/Users/ravimashru/projects/iai-aws-infra/.vagrant/machines/default/virtualbox/private_key ansible_python_interpreter=/usr/bin/python3
 
-aws_ec2 ansible_host=ec2-15-206-169-198.ap-south-1.compute.amazonaws.com ansible_python_interpreter=/usr/bin/python3
+aws_ec2 ansible_host=3.7.43.185 ansible_python_interpreter=/usr/bin/python3
