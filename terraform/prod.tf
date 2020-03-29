@@ -66,3 +66,8 @@ resource "aws_instance" "prod_server" {
     "Terraform" = "true"
   }
 }
+
+resource "aws_eip" "prod_id" {
+  instance = aws_instance.prod_server.id
+  vpc      = true
+}
