@@ -5,6 +5,7 @@ credentials
 .terraform
 *.tfstate
 *.tfstate.backup
+*.plan
 
 # Keys
 *.pub
