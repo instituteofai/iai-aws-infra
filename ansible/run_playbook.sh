@@ -1,3 +1,3 @@
 #! /bin/bash
 
-ansible-playbook -i hosts --key-file ./rsm_key.pem -u ubuntu playbook.yml
+ansible-playbook -i hosts --key-file ./aws-object-detection.pem -u ubuntu playbook.yml

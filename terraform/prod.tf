@@ -57,6 +57,7 @@ resource "aws_security_group" "prod_web" {
 resource "aws_instance" "prod_server" {
   ami           = var.ami_id
   instance_type = var.instance_type
+  key_name = "aws-object-detection"
 
   vpc_security_group_ids = [
     aws_security_group.prod_web.id
